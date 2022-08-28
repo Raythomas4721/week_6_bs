@@ -2,6 +2,7 @@ img{
     max-width: 100%;
     height: auto;
     vertical-align: middle; 
+    object-fit: cover;
 }
 
 *,*::after,*::after{
@@ -14,11 +15,21 @@ a{
 
 span {
     vertical-align: middle; 
+    display: inline-block;
 }
 .container{
     max-width: 1296px;
     margin: 0 auto;
 }
 body {
-    font-family: noto sans;
+    font-family: 'Noto Sans TC', sans-serif;
 }
+.azeret {
+    font-family: 'Azeret Mono', monospace;
+}
+.pb-37 {
+    padding-bottom: 37px !important;
+    @include phone () {
+        padding-bottom: 8px !important;
+    }
+  }
