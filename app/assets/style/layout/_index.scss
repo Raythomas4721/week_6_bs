@@ -241,6 +241,7 @@ h1 {
   }
 }
 //program
+
 .program {
   background-color: $light;
   width: 100%;
@@ -307,13 +308,17 @@ h1 {
     height: 451px;
     background-color: $light;
     border-radius: 24px;
+    &:hover {
+      border: 3px solid $success;
+      box-sizing: content-box;
+    }
     @include pad () {
       width: 47%;
-      height: 500px;
+      height: auto;
     }
     @include phone () {
       width: 95%;
-      height: 405px;
+      height: auto;
     }
     .card-bottom {
       display: flex;
@@ -368,11 +373,13 @@ h1 {
   height: 1px;
   background-color: #C1C1C1;
 }
+
+//special
 .special {
   width: 100%;
   height: 615px;
   flex-wrap: wrap;
-  &-card {
+  .special-card {
     width: 25%;
     height: 100%;
     position: relative;
@@ -395,9 +402,6 @@ h1 {
       font-size: 18px;
       line-height: 26px;
       opacity: 50%;
-      &:hover {
-        opacity: 100%;
-      }
     }
   }
 }
@@ -406,6 +410,19 @@ h1 {
   height: 3px;
   background-color: $success;
   margin-bottom: 32px;
+}
+.card-1:hover ,.card-2:hover ,.card-3:hover,.card-4:hover {
+  .text {
+    span {
+      color: $success;
+    }
+    p {
+      opacity: 100%;
+    }
+  }
+}
+.card-1:hover::before, .card-2:hover::before, .card-3:hover::before, .card-4:hover::before {
+  opacity: 100%;
 }
 .card-1::before {
   content: "";
@@ -464,3 +481,102 @@ h1 {
   opacity: 15%;
 }
 
+.article {
+  width: 100%;
+  height: 651px;
+  padding-bottom: 80px;
+  @include phone {
+    padding-bottom: 40px;
+  }
+  .title {
+    padding-top: 80px;
+    padding-bottom: 48px;
+    @include phone () {
+      padding-top: 40px;
+      padding-bottom: 40px;
+    }
+  }
+  
+}
+.article-com {
+  width: 100%;
+  flex-wrap: wrap;
+  gap: 24px;
+  .article-card {
+    width: 31%;
+    height: 387px;
+    padding: 32px;
+    @include pad () {
+      width: 100%;
+      height: 410px;
+    }
+    @include phone () {
+      padding: 0;
+      height: 358px;
+      padding-bottom: 24px;
+    }
+    img {
+      width: 100%;
+    }
+    h5 {
+      font-weight: bold;
+      font-size: 18px;
+      line-height: 26px;
+      padding-top: 16px;
+      padding-bottom: 16px;
+    }
+    p {
+      font-size: 16px;
+      line-height: 24px;
+    }
+    a {
+      font-family: Azeret Mono;
+      color: $success;
+      font-size: 18px;
+      line-height: 21px;
+      text-align: right;
+      display: block;
+    }
+    &:hover {
+      .borderCurve {
+        display: block;
+        @include pad () {
+          display: none;
+        }
+      }
+    }
+  }
+}
+.borderCurve {
+  width: 32px;
+  height: 32px;
+  display: none;
+  &-topLeft {
+    border-top: 1px solid #62DB54;
+    border-left: 1px solid #62DB54;
+    border-top-left-radius: 10px;
+    top: 0;
+    left: 0;
+  }
+  &-topRight {
+    border-top: 1px solid #62DB54;
+    border-right: 1px solid #62DB54;
+    border-top-right-radius: 10px;
+    top: 0;
+    right: 0;
+  }
+  &-bottomLeft {
+    border-bottom: 1px solid #62DB54;
+    border-left: 1px solid #62DB54;
+    border-bottom-left-radius: 10px;
+    bottom: 0;
+    left: 0;
+  }
+  &-bottomRight {
+    border-bottom: 1px solid #62DB54;
+    border-right: 1px solid #62DB54;
+    border-bottom-right-radius: 10px;
+    bottom: 0;
+    right: 0;
+  }
+}
