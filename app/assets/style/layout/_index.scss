@@ -33,6 +33,17 @@
 .dropdown li a:hover {
   background: lighten(#2D2D2D, 10%);
 }
+footer {
+  width: 100%;
+  p {
+    color: #909090;
+    font-size: 16px;
+    line-height: 19px;
+    padding-top: 24px;
+    padding-bottom: 24px;
+    text-align: center;
+  }
+}
 h1 {
   font-size: 48px;
   line-height: 70px;
@@ -110,79 +121,36 @@ h1 {
 //feature
 .feature {
   width: 100%;
-  height: 424px;
   background-color: $light;
-  @include pad {
-    height: 500px;
-  }
-  @include phone () {
-    height: 1030px;
-  }
-  >div {
+  padding-top: 80px;
+  padding-bottom: 80px;
+  .title {
+    padding-top: 68px;
     @include pad () {
+      display: flex;
       flex-direction: column;
+      align-items: center;
+      padding-top: 0;
+      padding-bottom: 48px;
     }
   }
 }
-.feature > div > .title {
-  width: 28%;
-  @include pad () {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-}
-.feature-list {
-  width: 70%;
-  gap: 24px;
-  @include pad () {
-    margin-top: 24px;
-    width: 100%;
-  }
-  @include phone () {
-    flex-direction: column;
-    align-items: center;
-  }
-  div {
-    width: 306px;
-    height: 264px;
-    padding: 48px 24px;
-    text-align: center;
-    &:hover {
-      border: 1px solid $success;
-      border-radius: 12px;
-      background-color: #202020;
-      span {
-        background: linear-gradient(0deg, #62DB54, #09ACF5);
-        background-clip: text;
-        color: transparent;
-      }
-    }
-    @include phone () {
-      width: 336px;
-      background-color: #202020;
-      border-radius: 12px;
-    }
-  }
+.feature-card {
+  height: 264px;
+  text-align: center;
+  padding: 52px 24px 48px 24px;
+  border: 1px solid $success;
+  border-radius: 12px;
   span {
-    font-size: 56px;
-    @include phone () {
-      background: linear-gradient(0deg, #62DB54, #09ACF5);
-      background-clip: text;
-      color: transparent;
-    }
+    font-size: 48px;
+    line-height: 20px;
   }
   h4 {
     font-size: 18px;
     line-height: 26px;
-    padding-top: 28px;
-    padding-bottom: 24px;
     font-weight: bold;
-    @include pad () {
-      padding-bottom: 16px;
-    }
+    padding-top: 28px;
+    padding-bottom: 16px;
   }
   p {
     font-size: 18px;
@@ -191,45 +159,29 @@ h1 {
 }
 /*process*/
 .process {
-  max-width: 100%;
   padding-bottom: 80px;
   .title {
     padding-top: 80px;
-    padding-bottom: 64px;
-  }
-}
-.process-com {
-  flex-wrap: wrap;
-  gap: 50px 24px;
-  @include phone () {
-    flex-direction: column;
-    align-items: center;
-    justify-content: start;
+    padding-bottom: 74px;
   }
 }
 .process-card {
-  width: 23%;
-  padding-left: 40px;
   position: relative;
   border: 1px solid #fff;
   border-radius: 12px;
-  @include pad () {
-    width: 46%;
-  }
-  @include phone () {
-    width: 95%;
+  .card-body {
+    padding: 48px;
   }
   span {
     position: absolute;
     top: -28px;
-    left: 48px;
+    left: 40px;
     font-size: 48px;
     line-height: 56px;
     color: $success;
     background-color: $dark;
   }
   h5 {
-    padding-top: 48px;
     font-size: 24px;
     line-height: 35px;
     font-weight: bold;
@@ -237,7 +189,6 @@ h1 {
   p {
     font-size: 18px;
     line-height: 26px;
-    padding-bottom: 48px;
   }
 }
 //program
@@ -260,112 +211,52 @@ h1 {
     margin-top: 24px;
   }
 }
+//promote
 .promote {
   background-color: #000000;
   width: 100%;
-  height: 805px;
-  padding-top: 80px;
-  @include pad () {
-    height: 1300px;
-  }
-  @include phone () {
-    height: 2041px;
-  }
-  .button {
-    padding-bottom: 40px;
-  }
-  .button a {
-    padding: 8px 32px;
-    border-radius: 8px;
-    background: linear-gradient(270deg, #62DB54, #09ACF5);
-    color: white;
-    text-align: center;
-    font-size: 18px;
-    line-height: 26px;
+  padding-bottom: 80px;
+  .title {
+    padding-top: 80px;
+    padding-bottom: 48px;
   }
 }
-.instructor {
-  padding-top: 24px;
-  padding-bottom: 24px;
-  img {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    padding-bottom: 8px;
-  }
-  p {
-    font-size: 16px;
-    line-height: 24px;
-    margin: 0;
-  }
-}
-
-.promote-com {
-  width: 100%;
-  flex-wrap: wrap;
-  .promote-card {
-    width: 23%;
-    height: 451px;
-    background-color: $light;
-    border-radius: 24px;
-    &:hover {
-      border: 3px solid $success;
-      box-sizing: content-box;
-    }
-    @include pad () {
-      width: 47%;
-      height: auto;
-    }
-    @include phone () {
-      width: 95%;
-      height: auto;
-    }
-    .card-bottom {
-      display: flex;
-      justify-content: center;
-      span {
-        font-size: 16px;
-        line-height: 24px;
-        padding-right: 8px;
-        padding-top: 22px;
-      }
-      p {
-        font-size: 32px;
-        line-height: 37px;
-        margin: 0;
-        padding-top: 16px;
-      }
-    }
-  }
-}
-.promoteText {
+.promote-card {
+  background-color: $light;
+  border-radius: 24px;
   padding-left: 24px;
   padding-right: 24px;
-  @include phone () {
-    padding-left: 32px;
-    padding-right: 32px;
+  .teacher {
+    padding-top: 24px;
+    padding-bottom: 24px;
+    img {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      margin-bottom: 8px;
+    }
+    p {
+      font-size: 16px;
+      line-height: 24px;
+      margin-bottom: 0;
+    }
   }
-  h5 {
+  h4 {
+    font-weight: bold;
     font-size: 20px;
     line-height: 29px;
-    font-weight: bold;
     padding-bottom: 8px;
-    margin-bottom: 0;
   }
-  span {
+  > span {
     font-size: 16px;
     line-height: 24px;
+    padding-bottom: 8px;
     color: $success;
-    padding-bottom: 8px;
   }
-  p {
+  > p {
     font-size: 16px;
     line-height: 24px;
-    margin: 0;
     padding-bottom: 32px;
-    @include phone () {
-      padding-bottom: 16px;
-    }
   }
 }
 .white-line {
@@ -373,15 +264,39 @@ h1 {
   height: 1px;
   background-color: #C1C1C1;
 }
-
+.card-footer {
+  padding: 16px 24px;
+  span {
+    font-size: 16px;
+    line-height: 24px;
+    padding: 0;
+    margin: 0;
+    margin-right: 8px;
+  }
+  p {
+    font-size: 32px;
+    line-height: 37px;
+    padding: 0;
+    margin: 0;
+  }
+}
+.promote-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 48px;
+  a {
+    font-size: 16px;
+    line-height: 26px;
+    padding: 8px 32px;
+    color: #fff;
+    background: linear-gradient(270deg, #62DB54, #09ACF5);
+  }
+}
 //special
 .special {
-  width: 100%;
-  height: 615px;
-  flex-wrap: wrap;
   .special-card {
-    width: 25%;
-    height: 100%;
+    height: 615px;
     position: relative;
     z-index: 0;
     padding-left: 48px;
@@ -480,7 +395,7 @@ h1 {
   z-index: -1;
   opacity: 15%;
 }
-
+//article
 .article {
   width: 100%;
   height: 651px;
@@ -496,7 +411,6 @@ h1 {
       padding-bottom: 40px;
     }
   }
-  
 }
 .article-com {
   width: 100%;
