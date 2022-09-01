@@ -4,7 +4,7 @@ $('.ham-icon').click(function (e) {
   e.preventDefault();
   $('.dropdown').toggleClass('active');
 });
-var swiper = new Swiper(".swiper-program", {
+var swiper2 = new Swiper(".swiper2-program", {
   autoplay: {
     disableOnInteraction: false,
     delay: 0
@@ -21,6 +21,18 @@ var swiper = new Swiper(".swiper-program", {
     992: {
       slidesPerView: 9
     }
+  }
+});
+var swiper = new Swiper(".mySwiper", {
+  spaceBetween: 30,
+  effect: "fade",
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev"
+  },
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true
   }
 });
 //# sourceMappingURL=all.js.map
