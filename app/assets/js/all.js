@@ -6,22 +6,12 @@ $('.ham-icon').click(function(e) {
 var swiper2 = new Swiper(".swiper2-program", {
   autoplay: {
       disableOnInteraction: false,
-      delay: 0
+      delay: 2000,
   },
   speed: 2000,
   loop: true,
   spaceBetween: 16,
-  slidesPerView: 3,
-  //多欄
-  breakpoints: {
-      768: {
-          slidesPerView: 6
-      },
-      992: {
-          slidesPerView: 9
-      }
-  }
-
+  slidesPerView: 'auto',
 });
 
 
@@ -36,4 +26,11 @@ var swiper = new Swiper(".mySwiper", {
     el: ".swiper-pagination",
     clickable: true,
   },
+});
+
+
+const swiper3 = new Swiper(".swiper3-program", {
+  slidesPerView: "auto",
+  spaceBetween: 16,
+  grabCursor: true,
 });
