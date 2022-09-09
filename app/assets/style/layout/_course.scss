@@ -85,6 +85,10 @@
         p {
             font-size: 16px;
             line-height: 24px;
+            padding-bottom: 72px;
+            @include md () {
+                padding-bottom: 48px;
+            }
         }
     }
     .price {
@@ -112,6 +116,7 @@
         .button-com {
             display: flex;
             flex-direction: column;
+            align-items: center;
             @include md () {
                 flex-direction: row;
             }
@@ -124,6 +129,7 @@
             border: 1px solid #fff;
             border-radius: 8px;
             margin-bottom: 6px;
+            white-space: nowrap;
             @include md () {
                 padding: 8px 24px;
                 margin-right: 8px;
@@ -136,6 +142,7 @@
             font-size: 18px;
             line-height: 26px;
             border-radius: 8px;
+            white-space: nowrap;
             background: linear-gradient(270deg, #62DB54, #09ACF5);
             @include md () {
                 padding: 8px 24px;
